@@ -36,7 +36,11 @@ fun SidebarItem(
             Icon(
                 imageVector = when (text) {
                     "Dashboard" -> Icons.Default.Home
-                    "Productos" -> Icons.Default.ShoppingCart
+                    "Evaluacion" -> Icons.Default.ShoppingCart
+                    "Software" -> Icons.Default.ShoppingCart
+                    "Parametros" -> Icons.Default.ShoppingCart
+
+
                     else -> Icons.Default.Home
                 },
                 contentDescription = null,

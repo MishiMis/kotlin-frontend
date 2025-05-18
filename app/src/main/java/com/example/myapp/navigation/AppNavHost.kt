@@ -6,7 +6,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.myapp.ui.dashboard.DashboardScreen
-import com.example.myapp.ui.productos.ProductosScreen
+import com.example.myapp.ui.evaluacion.EvaluacionScreen
+import com.example.myapp.ui.software.SoftwareScreen
+import com.example.myapp.ui.parametro.ParametrosScreen
+
 
 @Composable
 fun AppNavHost(
@@ -19,8 +22,14 @@ fun AppNavHost(
         composable(Screens.Dashboard.route) {
             DashboardScreen()
         }
-        composable(Screens.Productos.route) {
-            ProductosScreen()
+        composable(Screens.Evaluacion.route) {
+            EvaluacionScreen()
+        }
+        composable(Screens.Software.route){
+            SoftwareScreen()
+        }
+        composable(Screens.Parametros.route){
+            ParametrosScreen()
         }
     }
 }

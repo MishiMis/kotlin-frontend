@@ -144,10 +144,32 @@ fun SidebarOverlay(
                     }
                 )
                 SidebarItem(
-                    text = "Productos",
-                    isSelected = currentRoute == Screens.Productos.route,
+                    text = "Evaluacion",
+                    isSelected = currentRoute == Screens.Evaluacion.route,
                     onClick = {
-                        navController.navigate(Screens.Productos.route) {
+                        navController.navigate(Screens.Evaluacion.route) {
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                        onClose()
+                    }
+                )
+                SidebarItem(
+                    text = "Software",
+                    isSelected = currentRoute == Screens.Software.route,
+                    onClick = {
+                        navController.navigate(Screens.Software.route) {
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                        onClose()
+                    }
+                )
+                SidebarItem(
+                    text = "Parametros",
+                    isSelected = currentRoute == Screens.Parametros.route,
+                    onClick = {
+                        navController.navigate(Screens.Parametros.route) {
                             launchSingleTop = true
                             restoreState = true
                         }

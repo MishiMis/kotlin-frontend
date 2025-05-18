@@ -1,4 +1,4 @@
-package com.example.myapp.ui.productos
+package com.example.myapp.ui.evaluacion
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Text
@@ -8,13 +8,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ProductosScreen() {
+fun EvaluacionScreen() {
     Box(
         modifier = Modifier.fillMaxSize(),
         contentAlignment = Alignment.TopStart
     ) {
         Text(
-            text = "Productos",
+            text = "Evaluacion",
             fontSize = 24.sp
         )
     }
