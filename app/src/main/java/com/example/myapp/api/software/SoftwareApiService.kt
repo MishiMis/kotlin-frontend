@@ -1,30 +1,28 @@
 package com.example.myapp.api.software
 
 
-import com.example.myapp.model.evaluacion.EvaluationRequest
-import com.example.myapp.model.parametro.Parametro
-import com.example.myapp.model.parametro.ParametroListResponse
-import com.example.myapp.model.parametro.ParametroRequest
-import com.example.myapp.model.sofware.Software
-import com.example.myapp.model.sofware.SoftwareListResponse
-import com.example.myapp.model.sofware.SoftwareRequest
+
+import com.example.myapp.model.residuo.Recoleccion
+import com.example.myapp.model.residuo.RecoleccionRequest
+import com.example.myapp.model.residuo.Residuo
+import com.example.myapp.model.residuo.ResiduoListResponse
+import com.example.myapp.model.residuo.ResiduoRequest
+
 import retrofit2.Response
 import retrofit2.http.*
 
 interface SoftwareApiService {
-    @GET("software")
-    suspend fun getSoftwareList(): SoftwareListResponse
 
-    @POST("software")
-    suspend fun createSoftware(@Body software: SoftwareRequest): Software
+    @GET("residuos")
+    suspend fun getResiduos(): Response<ResiduoListResponse> // Devuelve Response<>
 
-    @GET("parameters")
-    suspend fun getParametros(): ParametroListResponse
+    @POST("residuos")
+    suspend fun createResiduo(@Body residuo: ResiduoRequest): Response<Residuo>
 
-    @POST("parameters")
-    suspend fun createParametros(@Body parameter: ParametroRequest): Parametro
+    @GET("recolecciones")
+    suspend fun getRecolecciones(): Response<List<Recoleccion>>
 
-    @POST("evaluations")
-    suspend fun createEvaluation(@Body evaluation: EvaluationRequest): Response<Void>
+    @POST("recolecciones")
+    suspend fun createRecoleccion(@Body recoleccion: RecoleccionRequest): Response<Recoleccion>
 
 }

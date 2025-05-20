@@ -5,10 +5,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.myapp.ui.dashboard.DashboardScreen
-import com.example.myapp.ui.evaluacion.EvaluacionScreen
-import com.example.myapp.ui.software.SoftwareScreen
-import com.example.myapp.ui.parametro.ParametrosScreen
+import com.example.myapp.ui.residuos.ResiduosScreen
+import com.example.myapp.ui.recoleccion.RecoleccionScreen
 
 
 @Composable
@@ -17,19 +15,13 @@ fun AppNavHost(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screens.Dashboard.route
+        startDestination = Screens.Residuos.route
     ) {
-        composable(Screens.Dashboard.route) {
-            DashboardScreen()
+        composable(Screens.Residuos.route){
+            ResiduosScreen()
         }
-        composable(Screens.Evaluacion.route) {
-            EvaluacionScreen()
-        }
-        composable(Screens.Software.route){
-            SoftwareScreen()
-        }
-        composable(Screens.Parametros.route){
-            ParametrosScreen()
+        composable(Screens.Recoleccion.route){
+            RecoleccionScreen()
         }
     }
 }

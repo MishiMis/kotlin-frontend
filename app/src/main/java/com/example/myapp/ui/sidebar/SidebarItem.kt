@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material.icons.filled.Build
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -35,10 +36,9 @@ fun SidebarItem(
         ) {
             Icon(
                 imageVector = when (text) {
-                    "Dashboard" -> Icons.Default.Home
-                    "Evaluacion" -> Icons.Default.ShoppingCart
-                    "Software" -> Icons.Default.ShoppingCart
-                    "Parametros" -> Icons.Default.ShoppingCart
+
+                    "Residuos" -> Icons.Default.Build
+                    "Recoleccion" -> Icons.Default.Build
 
 
                     else -> Icons.Default.Home
